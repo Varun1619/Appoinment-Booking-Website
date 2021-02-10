@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+.navbar{
+    width: 100%;
+    background: rgb(240, 243, 244);
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar .nav{
+    padding-top: 10px;
+    margin: 15px;
+    height: 40px;
+}
+
+.nav a{
+    text-decoration: none;
+    color:rgb(0,0,118);
+}
+
+.nav a:hover{
+    border-bottom: 3px solid rgb(0,0,118);
+}
+
+
+body{
+   
+    background: rgb(240, 243, 244);
+}
+
+.wrapper{
+    max-width: 500px;
+    width: 100%;
+    background: rgb(255,255,255);
+    margin: 20px auto;
+    padding: 30px;
+}
+
+.wrapper .title{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #000000;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+.wrapper .form{
+    width: 100%;
+
+}
+
+.wrapper .form .input_field{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+
+}
+
+.wrapper .form .input_field label{
+    width: 200px;
+    color: #000000;
+}
+
+.wrapper .form .input_field .input,
+.wrapper .form .input_field .textarea{
+    width: 100%;
+    outline: none;
+    border: 1px solid ; 
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.wrapper .form .input_field .textarea{
+    resize: none; 
+    height: 125px;
+}
+
+.wrapper .form .input_field .custom_select{
+    position: relative;
+    width: 100%;
+    height: 37px;
+}
+
+.wrapper .form .input_field .custom_select select{
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid;
+    width: 100%;
+    padding: 8px;
+    border-radius: 3px;
+} 
+
+.wrapper .form .input_field .custom_select:before{
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    border: 8px solid;
+    border-color:black transparent transparent transparent;
+    pointer-events: none;
+}
+
+.wrapper .form .input_field .input:focus,
+.wrapper .form .input_field .textarea:focus,
+.wrapper .form .input_field select:focus{
+    border-radius: 20px;
+    border: 3px solid;
+
+}
+
+.wrapper .form .input_field .btn{
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 0;
+    background: black;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+}
+
+.wrapper .form .input_field:last-child{
+    margin-bottom: 0px;
+}
+
+.wrapper .form .input_field .btn:hover{
+    background: grey;
+
+}
+
+@media(max-width:420px){
+    .wrapper .form .input_field{
+        flex-direction: column;
+        align-items:flex-start ;
+    }
+    .wrapper .form .input_field label{
+        margin-bottom: 5px;
+    }
+}
+

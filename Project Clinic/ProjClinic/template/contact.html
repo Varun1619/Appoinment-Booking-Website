@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book An Appoinment</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}"/>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<meta name="description"
+    content="Here are few 6 tips to help you know how to know your book is original or pirated">
+<meta name="keywords"
+    content="How to know your book is original or pirated,original,pirated,book,if your book is original or pirated">
+
+<link rel="stylesheet" href="./fonts.css">
+
+<link rel="stylesheet" href="./fontawesome-free-5.14.0-web/css/fontawesome.min.css">
+<link rel="stylesheet" href="./fontawesome-free-5.14.0-web/css/all.min.css">
+
+
+<style>
+    .carousel-inner {
+        height: 70vh !important;
+    }
+
+    .carousel-item {
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<title>How to know your book is original or pirated-Article|Poems|Articles|theuntoldfables.com</title>
+
+</head>
+
+<body>
+    <!--Navbar-->
+    <!-- <div class="navbar">
+        <div class="nav"><a href="#">Contact Us</a></div>
+        <div class="nav"><a href="home.html">About Me</a></div>
+
+    </div> -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5 p-3">
+        <a class="navbar-brand" href="#">DR.SITE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'home' %}">HOME <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">MAKE AN APPOINTMENT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                </li>
+
+
+            </ul>
+
+        </div>
+</nav>
+    <!--Main Wrapper-->
+    <div class="wrapper">
+        <div class="title">
+            Book an Appoinment
+        </div>
+    <!--Main Form-->
+    <form action="" method="POST">
+        <div class="form">
+            {% csrf_token %}
+            <!--First Name-->
+            <div class="input_field">
+                <label for="f-name">First Name</label>
+                <input type="text" name="name_first" id="f-name" class="input">
+            </div>
+            <!--Last Name-->
+            <div class="input_field">
+                <label for="l-name">Last Name</label>
+                <input type="text" name="name_last" id="l-name" class="input">
+            </div>
+            <!--Gender-->
+            <div class="input_field">
+                <label for="gender">Gender</label>
+                <div class="custom_select">
+                    <select name="gen">
+                        <option  value="">Select</option>
+                        <option  value="male">Male</option>
+                        <option  value="female">Female</option>
+                        <option  value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <!--Age-->
+            <div class="input_field">
+                <label for="age">Age</label>
+                <input type="tel" name="age_patient" id="age" class="input" maxlength="3">
+            </div>
+            <!--Mobile Number-->
+            <div class="input_field">
+                <label for="phone-number">Phone Number</label>
+                <input type="tel" name="phone_num" id="phone-number" class="input" maxlength="11">
+            </div>
+            <!--Problem Descryption-->
+            <div class="input_field">
+                <label for="desc">Describe your Issue</label>
+                <textarea class="textarea" name="issue" id = "textarea"></textarea>
+            </div>
+            <!--Submit-->
+            <div class="input_field">
+                <input type="submit" value="Submit" class="btn">
+            </div>
+        </div>
+    </form>
+    </div>  
+</body>
+
+<!-- <script type="text/javascript">
+    $(document).on'submit','new_user_form'.function (e) {
+        e.preventDefault();
+
+        $.ajax({
+            type:'post',
+            url:'/contact/'
+            data:{
+                name_first:$('#name_first').val(),
+                name_last:$('#name_last').val(),
+                gen:$('#gen').val(),
+                age_patient:$('#age_patitent').val(),
+                phone_num:$('#phone_num').val(),
+                issue:$('#issue').val(),
+            },
+            success:function(){
+
+            }
+        });
+        
+    }
+</script> -->
+
+</html>
