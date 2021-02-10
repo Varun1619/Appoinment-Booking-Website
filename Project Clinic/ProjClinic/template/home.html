@@ -1,4 +1,5 @@
 <!doctype html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -14,6 +15,7 @@
         content="How to know your book is original or pirated,original,pirated,book,if your book is original or pirated">
 
     <link rel="stylesheet" href="./fonts.css">
+    <link rel="stylesheet" href="{% static 'css/seo.css' %}">
 
     <link rel="stylesheet" href="./fontawesome-free-5.14.0-web/css/fontawesome.min.css">
     <link rel="stylesheet" href="./fontawesome-free-5.14.0-web/css/all.min.css">
@@ -35,12 +37,12 @@
         }
     </style>
 
-    <title>How to know your book is original or pirated-Article|Poems|Articles|theuntoldfables.com</title>
+    <title>Home</title>
 
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5 p-3">
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5 p-3">
         <a class="navbar-brand" href="#">DR.SITE</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,17 +65,42 @@
             </ul>
 
         </div>
-    </nav>
+    </nav> -->
+    <body class="bg-white" id="nishadf">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5 p-3">
+            <a class="navbar-brand" href="#">DR.SITE</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'home' %}">HOME <span class="sr-only"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">MAKE AN OPPOINTMENT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </nav>
     <div class="container">
 
 
         <div id="carouselExampleControls" class="carousel slide border border-dark yoo mb-5 " data-ride="carousel">
             <div class="carousel-inner yooin">
                 <div class="carousel-item active">
-                    <img src="./test1.jpg" class="d-block" alt="...">
+                    <img src="{% static 'photos/test1.jpg' %}" class="d-block" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="./test2.jpg" class="d-block" alt="...">
+                    <img src="{% static 'photos/test2.jpg' %}" class="d-block" alt="...">
                 </div>
 
             </div>
@@ -92,7 +119,7 @@
         </div>
         <div class="row mt-2 mb-2 p-3">
             <div class="col-md-6 mb-3">
-                <img src="./doc1.jpg" alt="" class="img-fluid">
+                <img src="{% static 'photos/doc.jpg' %}" alt="doc" class="img-fluid">
             </div>
             <div class="col-md-6 text-center justify-content-center align-items-center d-flex">
                 <h4><strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil deleniti iste, optio minus
